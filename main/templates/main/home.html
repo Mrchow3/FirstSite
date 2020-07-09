@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+
+    </head>
+    <body>
+        {% load static %}
+
+        <img 
+            src="{% static 'main/images/214962.jpg' %}" 
+            alt="Image description"
+            height= "500"
+            width= "1000"/>
+
+        <br>
+
+        <img 
+        src="{% static 'main/images/250572.jpg' %}" 
+        alt="Image description"
+        height= "500"
+        width= "1000"/>
+        
+
+
+        <h2>Data from "Data" Model</h2>
+
+        {%for data_object in Data%}
+
+        <p>{{data_object.title}}</p>
+        <p>{{data_object.content | safe}}</p>
+        <p>{{data_object.published}}</p>
+        <br><br>
+        {% endfor %}
+    </body>
+
+</html>
